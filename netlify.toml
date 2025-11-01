@@ -1,10 +1,49 @@
 # Netlify 설정 (정적 사이트)
 [build]
-  publish = "."  # 루트에 index.html이 있는 형태
+  publish = "./"  # 루트에 index.html이 있는 형태
 
+# 1) 기본 보안 헤더 (전역)
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "DENY"  # 사이트를 어떤 페이지에도 iframe으로 삽입 금지(필요시 SAMEORIGIN으로 완화)
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # HTTPS 사용 중이면 HSTS 적용 권장(도메인 준비 후 활성화)
+    # Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # 최소 권한 CSP: Tailwind CDN 스크립트 허용, 인라인 스타일 허용(필요한 수준만)
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';"
+    # 브라우저 기능 제한(불필요 권한 차단)
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+# 2) HTML 문서는 캐시 금지(즉시 반영)
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate"
+
+[[headers]]
+  for = "/privacy.html"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate"
+
+[[headers]]
+  for = "/terms.html"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate"
+
+# 3) 정적 에셋은 강력 캐시(버전 변경 시 파일명 바꾸면 됨)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -17,8 +17,37 @@
   <meta property="og:image" content="/img/og-hero.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Favicon (임시) -->
-  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <!-- 보강 ①: 로봇 -->
+  <meta name="robots" content="index,follow">
+
+  <!-- 보강 ②: Open Graph -->
+  <meta property="og:site_name" content="VeeDeeO DownLoader">
+  <meta property="og:locale" content="ko_KR">
+  <!-- 절대 URL + 권장 크기 1200x630 이미지로 교체 -->
+  <meta property="og:image" content="https://veedeeo.net/img/og-hero.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- 보강 ③: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VeeDeeO DownLoader — 유튜브 다운로드">
+  <meta name="twitter:description" content="4K 영상·MP3 추출 지원, 간단 설치로 바로 쓰는 무료 유튜브 다운로더.">
+  <meta name="twitter:image" content="https://veedeeo.net/img/og-hero.png">
+  <!-- 운영 중 트위터 계정이 있으면 언급 -->
+  <!-- <meta name="twitter:site" content="@YourAccount"> -->
+
+  <!-- 보강 ④: 구글/네이버 소유확인 (발급값으로 교체) -->
+  <meta name="google-site-verification" content="GOOGLE_VERIFICATION_TOKEN">
+  <meta name="naver-site-verification" content="NAVER_VERIFICATION_TOKEN">
+
+  <!-- Favicon (임시) 
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">-->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-v-light.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-v-light.png">
+  <link rel="apple-touch-icon" href="/img/favicon-v-light.png">
+  <meta name="theme-color" content="#1a83a8">
+
 
   <!-- TailwindCDN (간편 시작용) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,20 +58,33 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "VeeDeeO DownLoader",
-    "operatingSystem": "Windows",
+    "url": "https://veedeeo.net/",
+    "image": "https://veedeeo.net/img/og-hero.png",
+    "operatingSystem": "Windows 10+",
     "applicationCategory": "MultimediaApplication",
+    "description": "유튜브 4K 다운로드 및 MP3 추출을 지원하는 무료 윈도우 앱",
+    "downloadUrl": "https://biblesoftlab.org/veedeeo/download.php",
+    "softwareVersion": "1.0.0", 
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bible Soft Lab",
+      "url": "https://biblesoftlab.org"
+    },
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "KRW"
-    },
-    "description": "유튜브 4K 다운로드 및 MP3 추출을 지원하는 무료 윈도우 앱",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Bible Soft Lab"
     }
+    /* 선택: 실제 별점이 있을 때만 사용
+    ,"aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "152"
+    }
+    */
   }
   </script>
+
 
   <!-- 사이트 소유권 확인 (나중에 실제 코드로 교체) -->
   <!-- Google Search Console: <meta name=\"google-site-verification\" content=\"여기에_발급값\" /> -->

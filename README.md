@@ -2,6 +2,11 @@
 
 정적(HTML) 사이트로 아주 가볍게 시작합니다. Netlify 또는 GitHub Pages에 바로 올릴 수 있습니다.
 
+# VeeDeeO DownLoader
+A free Windows YouTube downloader that saves videos up to 4K and extracts MP3 audio.  
+**Download:** https://biblesoftlab.org/veedeeo/download.php  
+**Website:** https://veedeeo.net
+
 ## 1) 폴더 구성
 ```
 veedeeo-starter/

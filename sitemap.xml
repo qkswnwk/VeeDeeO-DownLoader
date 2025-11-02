@@ -2,5 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://veedeeo.net/</loc><lastmod>2025-11-01</lastmod><priority>1.00</priority></url>
   <url><loc>https://veedeeo.net/privacy.html</loc><lastmod>2025-11-01</lastmod></url>
-  <url><loc>https://veedeeo.net/terms.html</loc><lastmod>2025-11-01</lastmod></url>
+  <url><loc>https://veedeeo.net/terms.html</loc><lastmod>2025-11-01</lastmod></url>  
+  <url><loc>https://biblesoftlab.org/veedeeo/</loc></url>
+  <url><loc>https://biblesoftlab.org/veedeeo/download.php</loc></url>
 </urlset>

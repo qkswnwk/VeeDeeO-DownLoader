@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#4f46e5"/>
-      <stop offset="1" stop-color="#7c3aed"/>
-    </linearGradient>
-  </defs>
-  <rect rx="24" ry="24" x="8" y="8" width="112" height="112" fill="url(#g)"/>
-  <g fill="white">
-    <path d="M44 40h12l-12 48h-12z"/>
-    <path d="M70 40h12l-12 48h-12z"/>
-    <circle cx="96" cy="88" r="6"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 배경 원 -->
+  <circle cx="256" cy="256" r="256" fill="#1a83a8"/>
+  
+  <!-- 위쪽 ee -->
+  <text x="256" y="150" text-anchor="middle"
+        font-size="100" font-family="Poppins, Pretendard, sans-serif"
+        font-weight="700" fill="#ffffff" letter-spacing="-8">ee</text>
+  
+  <!-- 중앙 V (크기 대폭 확대) -->
+  <text x="256" y="430" text-anchor="middle"
+        font-size="330" font-family="Poppins, Pretendard, sans-serif"
+        font-weight="900" fill="#ffffff">V</text>
 </svg>

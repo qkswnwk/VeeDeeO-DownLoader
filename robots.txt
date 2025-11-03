@@ -1,3 +1,20 @@
+# robots.txt — Netlify SEO + 대역폭 최적화 버전
 User-agent: *
 Allow: /
+Disallow: /img/temp/
+Disallow: /js/dev/
+Crawl-delay: 10
+
 Sitemap: https://veedeeo.net/sitemap.xml
+
+# 명시적 검색 허용 및 외부 링크 노출 강화
+User-agent: Googlebot
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+# SEO 참고: https, canonical, og, JSON-LD 이미 반영됨

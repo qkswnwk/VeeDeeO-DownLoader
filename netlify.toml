@@ -1,22 +1,26 @@
 # Netlify 설정 (정적 사이트)
 [build]
-  publish = "./"  # 루트에 index.html이 있는 형태
+  publish = "./"  # 루트에 index.html이 있는 구조
 
-# 1) 기본 보안 헤더 (전역)
+##########################################################
+# 1️⃣ 보안 및 성능 헤더
+##########################################################
+
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"  # 사이트를 어떤 페이지에도 iframe으로 삽입 금지(필요시 SAMEORIGIN으로 완화)
+    X-Frame-Options = "SAMEORIGIN"                  # SEO/미리보기 호환 위해 완화
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    # HTTPS 사용 중이면 HSTS 적용 권장(도메인 준비 후 활성화)
-    # Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    # 최소 권한 CSP: Tailwind CDN 스크립트 허용, 인라인 스타일 허용(필요한 수준만)
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';"
-    # 브라우저 기능 제한(불필요 권한 차단)
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.tailwindcss.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://biblesoftlab.org; object-src 'none'; base-uri 'self'; frame-ancestors 'none';"
+    # HTTPS 사용시 HSTS 적용 가능 (한 달 후 적용 권장)
+    # Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
-# 2) HTML 문서는 캐시 금지(즉시 반영)
+##########################################################
+# 2️⃣ HTML 문서는 캐시 금지 (변경 즉시 반영)
+##########################################################
+
 [[headers]]
   for = "/index.html"
   [headers.values]
@@ -32,7 +36,10 @@
   [headers.values]
     Cache-Control = "no-store, no-cache, must-revalidate"
 
-# 3) 정적 에셋은 강력 캐시(버전 변경 시 파일명 바꾸면 됨)
+##########################################################
+# 3️⃣ 정적 리소스는 강력 캐시 (버전 변경 시 파일명 변경 필요)
+##########################################################
+
 [[headers]]
   for = "/css/*"
   [headers.values]
@@ -47,3 +54,13 @@
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+##########################################################
+# 4️⃣ SEO 유도용 Redirect (http → https 보강)
+##########################################################
+
+[[redirects]]
+  from = "http://veedeeo.net/*"
+  to = "https://veedeeo.net/:splat"
+  status = 301
+  force = true

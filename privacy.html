@@ -1,12 +1,169 @@
 <!doctype html>
-<html lang="ko"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>개인정보처리방침 - VeeDeeO</title>
-<link rel="stylesheet" href="/css/styles.css">
-<script src="https://cdn.tailwindcss.com"></script>
-</head><body class="bg-gray-50 text-gray-900">
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>개인정보처리방침 - VeeDeeO</title>
+
+  <!-- 기본 SEO -->
+  <meta name="description" content="VeeDeeO 개인정보처리방침: 수집 항목, 이용 목적, 보관 기간, 제3자 제공, 이용자 권리, 문의처 안내." />
+  <link rel="canonical" href="https://veedeeo.net/privacy.html" />
+  <link rel="alternate" href="https://veedeeo.net/privacy.html" hreflang="ko" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#1a83a8" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="VeeDeeO DownLoader">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="개인정보처리방침 - VeeDeeO">
+  <meta property="og:description" content="VeeDeeO 개인정보처리방침: 수집 항목, 이용 목적, 보관 기간, 제3자 제공, 이용자 권리, 문의처 안내.">
+  <meta property="og:url" content="https://veedeeo.net/privacy.html">
+  <!-- Netlify 대역폭 보호: OG 이미지는 외부(카페24) 사용 -->
+  <meta property="og:image" content="https://biblesoftlab.org/veedeeo/img/og-hero.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="VeeDeeO DownLoader 앱 미리보기">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="개인정보처리방침 - VeeDeeO">
+  <meta name="twitter:description" content="VeeDeeO 개인정보처리방침 안내 페이지.">
+  <meta name="twitter:image" content="https://biblesoftlab.org/veedeeo/img/og-hero.webp">
+
+  <!-- 성능/연결 보강 (OG 이미지 외부 도메인) -->
+  <link rel="preconnect" href="https://biblesoftlab.org">
+  <link rel="dns-prefetch" href="//biblesoftlab.org">
+
+  <!-- 스타일 (가벼운 정적 자원) -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <!-- TailwindCDN: 외부 CDN이므로 Netlify 대역폭에는 영향 미미, 필요한 경우만 로드 -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <!-- 구조화 데이터: PrivacyPolicy + Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PrivacyPolicy",
+    "inLanguage": "ko",
+    "url": "https://veedeeo.net/privacy.html",
+    "name": "개인정보처리방침 - VeeDeeO",
+    "description": "VeeDeeO 개인정보 처리에 관한 정책 안내",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bible Soft Lab",
+      "url": "https://biblesoftlab.org"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "VeeDeeO DownLoader",
+      "url": "https://veedeeo.net/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "홈",
+        "item": "https://veedeeo.net/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "개인정보처리방침",
+        "item": "https://veedeeo.net/privacy.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
   <main class="max-w-3xl mx-auto px-4 py-12">
-    <h1 class="text-2xl font-bold mb-6">개인정보처리방침</h1>
-    <p class="text-sm text-gray-600">본 서비스는 다운로드 통계 및 오류 수집을 위해 최소한의 정보를 처리할 수 있습니다. (초안)</p>
+    <h1 class="text-3xl font-bold mb-6">개인정보처리방침</h1>
+    <p class="text-sm text-gray-600 mb-8">
+      본 개인정보처리방침은 VeeDeeO(이하 “서비스”)가 처리하는 개인정보의 항목, 이용 목적, 보관 기간 및 이용자 권리 등을 안내합니다.
+      본 문서는 서비스 개선 과정에서 업데이트될 수 있으며, 중요한 변경 시 공지합니다.
+    </p>
+
+    <section class="space-y-6 text-[15px] leading-7">
+      <div>
+        <h2 class="font-semibold text-lg mb-2">1. 수집 항목 및 방법</h2>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li><strong>필수 최소 정보</strong>: 다운로드 클릭 이벤트 등 서비스 이용과정에서 생성되는 기술 로그(이벤트 이름, 발생 시각, 참조 URL)</li>
+          <li><strong>선택 정보</strong>: 오류 분석에 필요한 환경 정보(운영체제 버전, 앱 버전 등) — 사용자가 동의한 범위 내 수집</li>
+          <li><strong>수집 방법</strong>: 웹사이트 이용 시 자동 수집(예: 클릭 이벤트 태깅), 이용자 문의 시 수집</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-semibold text-lg mb-2">2. 이용 목적</h2>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>서비스 품질 향상(오류 분석, UI 개선, 다운로드 경로 최적화)</li>
+          <li>이용 통계 산출 및 보안(비정상 접속 패턴 탐지)</li>
+          <li>고객 문의 응대 및 분쟁 대응 기록 보관</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-semibold text-lg mb-2">3. 보관 기간</h2>
+        <p class="text-gray-700">
+          수집 목적 달성 시까지 보관 후 지체 없이 파기합니다. 관련 법령에 특별한 규정이 있는 경우 해당 기간 동안 보관할 수 있습니다.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-semibold text-lg mb-2">4. 제3자 제공 및 처리 위탁</h2>
+        <p class="text-gray-700">
+          법령에 따라 요구되는 경우를 제외하고, 서비스는 사전 동의 없이 개인정보를 제3자에게 제공하지 않습니다.
+          분석 목적을 위한 도구를 사용할 수 있으며, 이 경우 개인정보 보호법 등 관련 법령을 준수합니다.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-semibold text-lg mb-2">5. 이용자의 권리</h2>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>개인정보 열람·정정·삭제 요청</li>
+          <li>처리 정지 및 동의 철회 요청</li>
+          <li>권리 행사는 이메일을 통해 신청 가능하며, 신속히 처리합니다.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-semibold text-lg mb-2">6. 안전성 확보 조치</h2>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>접근 권한 관리 및 최소 권한 원칙 준수</li>
+          <li>전송 구간 암호화(HTTPS)</li>
+          <li>로그 접근 통제 및 보관 기한 준수</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-semibold text-lg mb-2">7. 문의처</h2>
+        <p class="text-gray-700">
+          개인정보 관련 문의는 아래 주소로 연락해 주세요.<br>
+          ✉️ <a class="underline" href="mailto:contact@biblesoftlab.org">contact@biblesoftlab.org</a>
+        </p>
+      </div>
+
+      <div class="text-xs text-gray-500">
+        최신 개정일: <time datetime="2025-11-04">2025-11-04</time>
+      </div>
+    </section>
+
+    <hr class="my-10 border-gray-200" />
+
+    <nav class="text-sm flex items-center gap-4">
+      <a href="/" class="underline">홈으로</a>
+      <a href="/terms.html" class="underline">이용약관</a>
+    </nav>
   </main>
-</body></html>
+
+  <!-- 불필요한 스크립트/이미지 로드 없음: Netlify 대역폭 보호 -->
+</body>
+</html>

@@ -10,23 +10,11 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LCX42BXHF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-4LCX42BXHF');
-
-  // 다운로드 클릭 이벤트 태깅
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('a[href*="download.php"]').forEach(a => {
-      a.addEventListener('click', () => {
-        gtag('event', 'download_click', {
-          event_category: 'engagement',
-          event_label: a.href
-        });
-      });
-    });
-  });
 </script>
+
 
 
   <!-- 기본 SEO -->
@@ -348,23 +336,24 @@
 
   <!-- 연도 출력 + 다운로드 클릭 이벤트 (GA4는 head에서 이미 초기화됨) -->
   <script>
-    // 푸터 연도 자동 출력
-    document.getElementById('year').textContent = new Date().getFullYear();
+  // 푸터 연도 자동 출력
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    // 다운로드 클릭 이벤트 태깅
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a[href*="download.php"]').forEach(a => {
-        a.addEventListener('click', () => {
-          if (typeof gtag === 'function') {
-            gtag('event', 'download_click', {
-              event_category: 'engagement',
-              event_label: a.href
-            });
-          }
-        });
+  // 다운로드 클릭 이벤트 태깅
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href*="download.php"]').forEach(a => {
+      a.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+          gtag('event', 'download_click', {
+            event_category: 'engagement',
+            event_label: a.href
+          });
+        }
       });
     });
-  </script>
+  });
+</script>
+
 
   <!-- Netlify 트래픽 절감을 위해 main.js 로드 제거? (현재는 사용 중이므로 유지) -->
   <!-- 라이브러리 -->

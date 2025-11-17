@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VeeDeeO DownLoader — 유튜브 다운로드 (무료/4K/MP3)</title>
 
+  <!-- GA4: veedeeo.net 방문자 분석 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LCX42BXHF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4LCX42BXHF');
+  </script>
+
   <!-- 기본 SEO -->
   <meta name="description" content="VeeDeeO DownLoader — 쉽고 빠른 유튜브 다운로드. 4K, MP3 음원 추출 지원. 윈도우용 무료 앱." />
   <link rel="canonical" href="https://veedeeo.net/" />
@@ -141,7 +150,7 @@
         <a href="#faq" class="hover:text-indigo-600" aria-label="자주 묻는 질문 섹션으로">FAQ</a>
         <a href="#contact" class="hover:text-indigo-600" aria-label="문의 섹션으로">문의</a>
       </nav>
-      <a href="#download" class="md:hidden px-3 py-1.5 rounded-lg bg-indigo-600 text-white text-sm">डाउन로드</a>
+      <a href="#download" class="md:hidden px-3 py-1.5 rounded-lg bg-indigo-600 text-white text-sm">다운로드</a>
     </div>
   </header>
 
@@ -322,16 +331,10 @@
     ⬇️ 다운로드
   </a>
 
-  <!-- GA4 + 다운로드 클릭 이벤트 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LCX42BXHF"></script>
+  <!-- 연도 출력 + 다운로드 클릭 이벤트 (GA4는 head에서 이미 초기화됨) -->
   <script>
-    // 연도 출력
+    // 푸터 연도 자동 출력
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-4LCX42BXHF');
 
     // 다운로드 클릭 이벤트 태깅
     document.addEventListener('DOMContentLoaded', () => {
@@ -348,8 +351,7 @@
     });
   </script>
 
-  <!-- Netlify 트래픽 절감을 위해 main.js 로드 제거 -->
-  <!-- <script src="/js/main.js" defer></script> -->
+  <!-- Netlify 트래픽 절감을 위해 main.js 로드 제거? (현재는 사용 중이므로 유지) -->
   <!-- 라이브러리 -->
   <script src="/js/vendor/aos.min.js" defer></script>
   <!-- 우리 래퍼들 -->

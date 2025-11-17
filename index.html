@@ -6,13 +6,28 @@
   <title>VeeDeeO DownLoader — 유튜브 다운로드 (무료/4K/MP3)</title>
 
   <!-- GA4: veedeeo.net 방문자 분석 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LCX42BXHF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-4LCX42BXHF');
-  </script>
+  <!-- GA4 (측정ID 적용) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LCX42BXHF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4LCX42BXHF');
+
+  // 다운로드 클릭 이벤트 태깅
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href*="download.php"]').forEach(a => {
+      a.addEventListener('click', () => {
+        gtag('event', 'download_click', {
+          event_category: 'engagement',
+          event_label: a.href
+        });
+      });
+    });
+  });
+</script>
+
 
   <!-- 기본 SEO -->
   <meta name="description" content="VeeDeeO DownLoader — 쉽고 빠른 유튜브 다운로드. 4K, MP3 음원 추출 지원. 윈도우용 무료 앱." />

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 Disallow: /img/temp/
 Disallow: /js/dev/
-Crawl-delay: 10
+
 
 Sitemap: https://veedeeo.net/sitemap.xml
 

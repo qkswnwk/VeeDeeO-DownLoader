@@ -1,24 +1,28 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VeeDeeO DownLoader — 유튜브 다운로드 (무료/4K/MP3)</title>
+  <title>VeeDeeO DownLoader — 유튜브 다운로드 & YouTube Video Downloader (4K/MP3)</title>
 
   <!-- GA4: veedeeo.net 방문자 분석 -->
   <!-- GA4 (측정ID 적용) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LCX42BXHF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-4LCX42BXHF');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LCX42BXHF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4LCX42BXHF');
+  </script>
 
 
 
   <!-- 기본 SEO -->
-  <meta name="description" content="VeeDeeO DownLoader — 쉽고 빠른 유튜브 다운로드. 4K, MP3 음원 추출 지원. 윈도우용 무료 앱." />
+  <meta name="description"
+    content="VeeDeeO DownLoader — 쉽고 빠른 유튜브 다운로드, 4K 영상 및 MP3 추출. Free YouTube Video Downloader for Windows. Best app to download YouTube videos & audio." />
+  <meta name="keywords"
+    content="유튜브 다운로드, 유튜브 영상 다운로드, 유튜브 음원 추출, 유튜브 다운 앱, youtube download, youtube video downloader, youtube mp3 converter, 4k video downloader" />
   <link rel="canonical" href="https://veedeeo.net/" />
   <link rel="alternate" href="https://veedeeo.net/" hreflang="ko" />
   <meta name="robots" content="index,follow" />
@@ -32,7 +36,7 @@
   <meta property="og:description" content="4K 영상·MP3 추출 지원, 간단 설치로 바로 사용 가능한 무료 유튜브 다운로더.">
   <meta property="og:url" content="https://veedeeo.net/">
   <!-- Netlify 대역폭 보호: 이미지 외부(카페24)로 이관 -->
-  <meta property="og:image" content="https://biblesoftlab.org/veedeeo/img/og-hero.png">
+  <meta property="og:image" content="https://biblesoftlab.org/veedeeo/img/youtube-downloader-og.png">
   <meta property="og:image:type" content="image/webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -42,7 +46,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="VeeDeeO DownLoader — 유튜브 다운로드">
   <meta name="twitter:description" content="4K 영상·MP3 추출 지원, 간단 설치로 바로 쓰는 무료 유튜브 다운로더.">
-  <meta name="twitter:image" content="https://biblesoftlab.org/veedeeo/img/og-hero.png">
+  <meta name="twitter:image" content="https://biblesoftlab.org/veedeeo/img/youtube-downloader-og.png">
 
   <!-- 사이트 소유권 확인(발급값으로 교체) -->
   <meta name="google-site-verification" content="GOOGLE_VERIFICATION_TOKEN">
@@ -59,10 +63,9 @@
   <link rel="dns-prefetch" href="//biblesoftlab.org">
 
   <!-- 히어로 이미지는 외부(카페24)에서만 프리로드 -->
-  <link rel="preload" as="image"
-        href="https://biblesoftlab.org/veedeeo/img/hero-ui.webp"
-        imagesrcset="https://biblesoftlab.org/veedeeo/img/hero-ui.webp 1x, https://biblesoftlab.org/veedeeo/img/hero-ui@2x.webp 2x"
-        fetchpriority="high" />
+  <link rel="preload" as="image" href="https://biblesoftlab.org/veedeeo/img/youtube-downloader-ui.webp"
+    imagesrcset="https://biblesoftlab.org/veedeeo/img/youtube-downloader-ui.webp 1x, https://biblesoftlab.org/veedeeo/img/youtube-downloader-ui@2x.webp 2x"
+    fetchpriority="high" />
 
   <!-- TailwindCDN (간편 시작용) -->
   <script src="https://cdn.tailwindcss.com" defer></script>
@@ -74,10 +77,11 @@
     "@type": "SoftwareApplication",
     "name": "VeeDeeO DownLoader",
     "url": "https://veedeeo.net/",
-    "image": "https://biblesoftlab.org/veedeeo/img/og-hero.webp",
+    "image": "https://biblesoftlab.org/veedeeo/img/youtube-downloader-og.webp",
     "operatingSystem": "Windows 10+",
     "applicationCategory": "MultimediaApplication",
-    "description": "유튜브 4K 다운로드 및 MP3 추출을 지원하는 무료 윈도우 앱",
+    "description": "유튜브 4K 다운로드 및 MP3 추출을 지원하는 무료 윈도우 앱 (Free YouTube Video Downloader for Windows)",
+    "alternateName": ["YouTube Downloader", "Free Video Downloader"],
     "downloadUrl": "https://biblesoftlab.org/veedeeo/download.php",
     "softwareVersion": "1.0.0",
     "publisher": {
@@ -138,12 +142,14 @@
   <!-- 로컬 CSS (정적 빌드본 권장) -->
   <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body class="min-h-screen bg-gray-50 text-gray-900">
   <!-- 헤더 -->
   <header class="border-b bg-white/70 backdrop-blur sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2" aria-label="홈으로">
-        <img src="/img/favicon.svg" alt="VeeDeeO 로고" class="w-7 h-7" width="28" height="28" loading="eager" decoding="async">
+        <img src="/img/favicon.svg" alt="VeeDeeO YouTube Downloader Logo" class="w-7 h-7" width="28" height="28"
+          loading="eager" decoding="async">
         <span class="font-semibold tracking-tight">VeeDeeO DownLoader</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -163,7 +169,7 @@
       <div class="grid md:grid-cols-2 items-center gap-10">
         <div>
           <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
-            <span class="block text-gray-700 text-xl md:text-2xl">유튜브 다운로드 프로그램</span>
+            <span class="block text-gray-700 text-xl md:text-2xl">유튜브 다운로드 프로그램 (YouTube Downloader)</span>
             <span class="block text-indigo-700">VeeDeeO DownLoader</span>
           </h1>
           <p class="mt-5 text-gray-600 text-base md:text-lg">
@@ -171,7 +177,8 @@
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="https://biblesoftlab.org/veedeeo/download.php?utm_source=veedeeo.net&utm_medium=hero_cta&utm_campaign=homepage"
-               class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700" rel="noopener">
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700"
+              rel="noopener">
               ⬇️ 다운로드 (Windows)
             </a>
             <a href="#features" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border font-semibold">
@@ -183,13 +190,10 @@
         <div class="relative">
           <!-- 히어로 이미지를 카페24에서 서빙 -->
           <a href="https://biblesoftlab.org/veedeeo/index.php" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://biblesoftlab.org/veedeeo/img/hero-ui.png"
-              srcset="https://biblesoftlab.org/veedeeo/img/hero-ui.png 1x, https://biblesoftlab.org/veedeeo/img/hero-ui@2x.webp 2x"
-              alt="VeeDeeO UI 미리보기"
-              class="w-full rounded-2xl shadow-xl"
-              width="1200" height="800"
-              loading="eager" decoding="async">
+            <img src="https://biblesoftlab.org/veedeeo/img/youtube-downloader-ui.png"
+              srcset="https://biblesoftlab.org/veedeeo/img/youtube-downloader-ui.png 1x, https://biblesoftlab.org/veedeeo/img/youtube-downloader-ui@2x.webp 2x"
+              alt="VeeDeeO YouTube Downloader Interface - Free 4K Video Download" class="w-full rounded-2xl shadow-xl"
+              width="1200" height="800" loading="eager" decoding="async">
           </a>
         </div>
       </div>
@@ -230,43 +234,43 @@
   </section>
 
   <!-- 사용 방법 -->
-<section id="howto" class="py-16">
-  <div class="max-w-6xl mx-auto px-4">
+  <section id="howto" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      
-      <!-- 왼쪽: 한 개의 영상 -->
-      <div>
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">사용 방법 (단일 영상)</h2>
-        <ol class="space-y-3 text-gray-700">
-          <li><span class="font-semibold">1)</span> 유튜브 영상 URL을 복사하여 앱에 붙여넣기</li>
-          <li><span class="font-semibold">2)</span> 원하는 화질 또는 MP3 선택</li>
-          <li><span class="font-semibold">3)</span> 다운로드 버튼 클릭</li>
-        </ol>
-        <p class="mt-4 text-sm text-gray-500">
-          다운이 안될 경우는 연결 문제 또는 제한된 목록일 수 있습니다.
-        </p>
-      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
-      <!-- 오른쪽: 재생목록 -->
-      <div>
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">사용 방법 (재생목록)</h2>
-        <ol class="space-y-3 text-gray-700">
-          <li><span class="font-semibold">1)</span> 재생목록 URL을 복사하여 앱에 붙여넣기</li>
-          <li><span class="font-semibold">2)</span> 원하는 화질 또는 MP3 설정</li>
-          <li><span class="font-semibold">3)</span> 다운로드 버튼 클릭</li>
-          <li><span class="font-semibold">4)</span> 우측에 재생목록 중에 다운 받을 항목 선택</li>
-          <li><span class="font-semibold">4)</span> 선택 항목 다운로드 버튼 클릭</li>
-        </ol>
-        <p class="mt-4 text-sm text-gray-500">
-          재생목록에서 항목이 보이지 않는 경우 연결 문제 또는 제한된 목록일 수 있습니다.
-        </p>
+        <!-- 왼쪽: 한 개의 영상 -->
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-6">사용 방법 (단일 영상)</h2>
+          <ol class="space-y-3 text-gray-700">
+            <li><span class="font-semibold">1)</span> 유튜브 영상 URL을 복사하여 앱에 붙여넣기</li>
+            <li><span class="font-semibold">2)</span> 원하는 화질 또는 MP3 선택</li>
+            <li><span class="font-semibold">3)</span> 다운로드 버튼 클릭</li>
+          </ol>
+          <p class="mt-4 text-sm text-gray-500">
+            다운이 안될 경우는 연결 문제 또는 제한된 목록일 수 있습니다.
+          </p>
+        </div>
+
+        <!-- 오른쪽: 재생목록 -->
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-6">사용 방법 (재생목록)</h2>
+          <ol class="space-y-3 text-gray-700">
+            <li><span class="font-semibold">1)</span> 재생목록 URL을 복사하여 앱에 붙여넣기</li>
+            <li><span class="font-semibold">2)</span> 원하는 화질 또는 MP3 설정</li>
+            <li><span class="font-semibold">3)</span> 다운로드 버튼 클릭</li>
+            <li><span class="font-semibold">4)</span> 우측에 재생목록 중에 다운 받을 항목 선택</li>
+            <li><span class="font-semibold">4)</span> 선택 항목 다운로드 버튼 클릭</li>
+          </ol>
+          <p class="mt-4 text-sm text-gray-500">
+            재생목록에서 항목이 보이지 않는 경우 연결 문제 또는 제한된 목록일 수 있습니다.
+          </p>
+        </div>
+
       </div>
 
     </div>
-
-  </div>
-</section>
+  </section>
 
 
   <!-- 다운로드 -->
@@ -276,10 +280,13 @@
       <p class="text-gray-600">아래 버튼을 눌러 최신 버전을 받아 설치하세요.</p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a href="https://biblesoftlab.org/veedeeo/download.php?utm_source=veedeeo.net&utm_medium=download_section&utm_campaign=homepage"
-           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700" rel="noopener">
+          class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700"
+          rel="noopener">
           ⬇️ Windows 설치 파일
         </a>
-        <a href="https://biblesoftlab.org/veedeeo/" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border font-semibold" target="_blank" rel="noopener">
+        <a href="https://biblesoftlab.org/veedeeo/"
+          class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border font-semibold" target="_blank"
+          rel="noopener">
           🔗 릴리스 노트
         </a>
       </div>
@@ -298,40 +305,40 @@
 
   <!-- FAQ -->
   <section id="faq" class="py-16 border-t bg-white">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-2xl md:text-3xl font-bold mb-8">FAQ</h2>
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">FAQ</h2>
 
-    <details class="p-5 rounded-xl border bg-gray-50 mb-3">
-      <summary class="font-semibold cursor-pointer">VeeDeeO는 무료인가요?</summary>
-      <p class="mt-3 text-sm text-gray-600">
-        네, <strong>개인·단체 등 모든 사용자</strong>가 무료로 이용할 수 있습니다. VeeDeeO는
-        <strong>다운로드를 위한 기술만 제공</strong>하며, 사용 시 각 플랫폼의 저작권 및 이용약관을 반드시 준수해야 합니다.
-      </p>
-    </details>
+      <details class="p-5 rounded-xl border bg-gray-50 mb-3">
+        <summary class="font-semibold cursor-pointer">VeeDeeO는 무료인가요?</summary>
+        <p class="mt-3 text-sm text-gray-600">
+          네, <strong>개인·단체 등 모든 사용자</strong>가 무료로 이용할 수 있습니다. VeeDeeO는
+          <strong>다운로드를 위한 기술만 제공</strong>하며, 사용 시 각 플랫폼의 저작권 및 이용약관을 반드시 준수해야 합니다.
+        </p>
+      </details>
 
-    <details class="p-5 rounded-xl border bg-gray-50 mb-3">
-      <summary class="font-semibold cursor-pointer">지원 화질은 어떻게 되나요?</summary>
-      <p class="mt-3 text-sm text-gray-600">
-        최대 4K(2160p)까지를 목표로 합니다. 단, <strong>원본 영상의 화질/권한 제한</strong>에 따라 실제 지원 해상도는 달라질 수 있습니다.
-      </p>
-    </details>
+      <details class="p-5 rounded-xl border bg-gray-50 mb-3">
+        <summary class="font-semibold cursor-pointer">지원 화질은 어떻게 되나요?</summary>
+        <p class="mt-3 text-sm text-gray-600">
+          최대 4K(2160p)까지를 목표로 합니다. 단, <strong>원본 영상의 화질/권한 제한</strong>에 따라 실제 지원 해상도는 달라질 수 있습니다.
+        </p>
+      </details>
 
-    <details class="p-5 rounded-xl border bg-gray-50 mb-3">
-      <summary class="font-semibold cursor-pointer">macOS도 지원하나요?</summary>
-      <p class="mt-3 text-sm text-gray-600">
-        현재는 Windows용이며, macOS 버전은 추후 검토 중입니다.
-      </p>
-    </details>
+      <details class="p-5 rounded-xl border bg-gray-50 mb-3">
+        <summary class="font-semibold cursor-pointer">macOS도 지원하나요?</summary>
+        <p class="mt-3 text-sm text-gray-600">
+          현재는 Windows용이며, macOS 버전은 추후 검토 중입니다.
+        </p>
+      </details>
 
-    <details class="p-5 rounded-xl border bg-gray-50">
-      <summary class="font-semibold cursor-pointer">저작권 관련 주의사항은?</summary>
-      <p class="mt-3 text-sm text-gray-600">
-        VeeDeeO는 <strong>소프트웨어 기술만 제공</strong>합니다. 영상·음원 등의 저작권은 원저작자와
-        플랫폼(예: 유튜브)에 있으며, 사용자는 <strong>합법적·비침해</strong> 범위에서만 이용해야 합니다.
-      </p>
-    </details>
-  </div>
-</section>
+      <details class="p-5 rounded-xl border bg-gray-50">
+        <summary class="font-semibold cursor-pointer">저작권 관련 주의사항은?</summary>
+        <p class="mt-3 text-sm text-gray-600">
+          VeeDeeO는 <strong>소프트웨어 기술만 제공</strong>합니다. 영상·음원 등의 저작권은 원저작자와
+          플랫폼(예: 유튜브)에 있으며, 사용자는 <strong>합법적·비침해</strong> 범위에서만 이용해야 합니다.
+        </p>
+      </details>
+    </div>
+  </section>
 
   <!-- 연락처 -->
   <section id="contact" class="py-16 bg-gray-50 border-t">
@@ -357,29 +364,30 @@
 
   <!-- 모바일 고정 CTA -->
   <a href="https://biblesoftlab.org/veedeeo/download.php?utm_source=veedeeo.net&utm_medium=fab&utm_campaign=homepage"
-     class="fixed bottom-4 right-4 md:hidden px-4 py-3 rounded-full shadow-lg bg-indigo-600 text-white font-semibold" rel="noopener">
+    class="fixed bottom-4 right-4 md:hidden px-4 py-3 rounded-full shadow-lg bg-indigo-600 text-white font-semibold"
+    rel="noopener">
     ⬇️ 다운로드
   </a>
 
   <!-- 연도 출력 + 다운로드 클릭 이벤트 (GA4는 head에서 이미 초기화됨) -->
   <script>
-  // 푸터 연도 자동 출력
-  document.getElementById('year').textContent = new Date().getFullYear();
+    // 푸터 연도 자동 출력
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  // 다운로드 클릭 이벤트 태깅
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('a[href*="download.php"]').forEach(a => {
-      a.addEventListener('click', () => {
-        if (typeof gtag === 'function') {
-          gtag('event', 'download_click', {
-            event_category: 'engagement',
-            event_label: a.href
-          });
-        }
+    // 다운로드 클릭 이벤트 태깅
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href*="download.php"]').forEach(a => {
+        a.addEventListener('click', () => {
+          if (typeof gtag === 'function') {
+            gtag('event', 'download_click', {
+              event_category: 'engagement',
+              event_label: a.href
+            });
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
 
 
   <!-- Netlify 트래픽 절감을 위해 main.js 로드 제거? (현재는 사용 중이므로 유지) -->
@@ -391,4 +399,5 @@
   <script src="/js/scrollreveal.min.js" defer></script>
 
 </body>
+
 </html>
